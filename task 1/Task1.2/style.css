@@ -1,0 +1,24 @@
+body{
+    background-color: #10202F;
+}
+.parent{
+    background-color: #3D598B;
+}
+
+h1{
+    color:#8D651D;
+}
+h2{
+    color: #909599;
+}
+.item{
+    display: inline-block;
+    width: 25%;
+    vertical-align: top;
+}
+
+img{
+    width: 20%;
+    height: 150px;
+    vertical-align: top;
+}
