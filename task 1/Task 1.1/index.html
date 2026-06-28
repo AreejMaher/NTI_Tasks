@@ -4,75 +4,77 @@
 </head>
 <body>
     <div class="parent">
-        <!-- split the screen into right and left divs -->
-        <!-- left==>img
-        right==>doctor appoinment info -->
-        <div class="left">
-        <img src="images/image.png">
-        </div>
         <div class="right">
+        <img src="images/image.png" width="30%" height="100%">
+        </div>
+        <div class="left">
         <h1>Doctor Appointment Form</h1>
         <hr>
-        <!-- two rows table
-        first row the title
-        second row the inputs -->
-        <table>
-            <tr>
-                <td>Appointment Date</td>
-                <td><input type="date" name="date" placeholder="Appointment Date"></td>
-            </tr>
-            <tr>
-                <td>Appointment Time</td>
-                <td><input type="time" name="time" placeholder="Appointment time"></td>
-            </tr>
-            <tr>
-                <td>Name</td>
-                <td>
-                    <input type="text" name="first-name" placeholder="First"> 
-                    <input type="text" name="last-name" placeholder="Last"> 
-                </td>
-            </tr>
-            <tr>
-                <td>Gender</td>
-                <td>
-                    <span>Male</span><input type="radio" name="gender" value="male">
-                    <span>Female</span><input type="radio" name="gender" value="female"></td>
-            </tr>
-            <tr>
-                <td>Phone</td>
-                <td><input type="number" name="phone-number" placeholder="####"></td>
-            </tr>
-            <tr>
-                <td>Address</td>
-                <td>
-                    <input type="text" name="city" placeholder="city">
-                    <input type="text" name="state" placeholder="state">
-                </td>
-            </tr>
-            <tr>
-                <td>Your Query</td>
-                <td><textarea rows="4"></textarea></td>
-            </tr>
-            <tr>
-                <td>Appointment Type</td>
-                <td>
-                    <label>Select which appointment type(s) you require</label>
-                    <br>
-                    <input type="checkbox" name="checkup" value="Cervix checkup"><span>Cervix checkup</span>
-                    <br>
-                    <input type="checkbox" name="checkup" value="Heart checkup"><span>Heart checkup</span>
-                    <br>
-                    <input type="checkbox" name="checkup" value="Eye check-up"><span>Eye check-up</span>
-                    <br>
-                    <input type="checkbox" name="checkup" value="Hearing Test"><span>Hearing Test</span>
-                    <br>
-                </td>
-            </tr>
-            <tr>
-                <td></td>
-                <td><button>Send</button></td>
-            </tr>
-        </table>
+            <form>
+            <div class="item">
+            <label>Appointment Date</label>
+            </div>
+            <input type="date" name="date" placeholder="Appointment Date">
+            <br>
+            <br>
+            <div class="item">
+            <label>Appointment Time</label>
+            </div>
+            <input type="time" name="time" placeholder="Appointment Time">
+            <br>
+            <br>
+            <div class="item">
+            <label>Name</label>
+            </div>
+            <input type="text" name="first-name" placeholder="First">
+            <input type="text" name="last-name" placeholder="Last">
+            <br>
+            <br>
+            <div class="item">
+            <label>Gender</label>
+            </div>
+            <span>Male</span><input type="radio" name="gender" value="male">
+            <span>Female</span><input type="radio" name="gender" value="female">
+            <br>
+            <br>
+            <div class="item">
+            <label>Phone</label>
+            </div>
+            <input type="number" name="phone-number" placeholder="####">
+            <br>
+            <br>
+            <div class="item">
+            <label>Address</label>
+            </div>
+            <input type="text" name="city" placeholder="city">
+            <input type="text" name="state" placeholder="state">
+            <br>
+            <br>
+            <div class="item">
+            <label>Your Query</label>
+            </div>
+            <input type="query" name="query">
+            <br>
+            <br>
+            <div class="item">
+            <label>Appointment Type</label>
+            </div>
+            <div class="item2">
+            <label>Select which appointment type(s) you require</label>
+            <br>
+            <input type="checkbox" name="checkup" value="Cervix checkup"><span>Cervix checkup</span>
+            <br>
+            <input type="checkbox" name="checkup" value="Heart checkup"><span>Heart checkup</span>
+            <br>
+            <input type="checkbox" name="checkup" value="Eye check-up"><span>Eye check-up</span>
+            <br>
+            <input type="checkbox" name="checkup" value="Hearing Test"><span>Hearing Test</span>
+            <br>
+            <br>
+            <button>Send</button>
+            </div>
+            </form>
+        </div>
         </div>
    </div>
 </body>
