@@ -1,0 +1,1011 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+h2{
+   font-family: "Alegreya", serif; 
+   font-weight: 400;
+   color: rgb(48, 48, 48);
+}
+p{
+    font-family: "Alegreya Sans", serif; 
+}
+header{
+    height: 115vh;
+    width:100%;
+    background-image: url(../images/drew-coffman-1872.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+/* navbar */
+.nav-content{
+    padding-top: 5px;
+}
+
+.navbar{
+    box-sizing: border-box;
+    position:fixed;
+    top:0;
+    left: 0;
+    display:flex;
+    flex-direction: row;
+    height: 80px;
+    width: 100%;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 0 100px;
+    z-index: 100;
+    animation: navScroll linear both;
+    animation-timeline: scroll(); /* Links the animation to the page scroll */
+    animation-range: 0 150px; /* Completes the animation after scrolling 150px down */
+}
+
+@keyframes navScroll {
+    0% {
+        background-color: transparent;
+    }
+    100% {
+        /* After scrolling down 150px */
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+.logo img{
+    height: 48px;
+    animation: logoScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+}
+
+@keyframes logoScroll {
+    0%, 90% {
+        content: url('../images/bakery-light-1.png');
+    }
+    100% {
+        content: url('../images/bakery-color.png');
+    }
+}
+
+.menu-bars{
+    display: none;
+    color: rgb(104, 104, 104);
+    font-size: 35px;
+    cursor: pointer;
+}
+
+.navbar .list{
+    display: flex;
+    list-style-type: none;
+    flex-direction: row;
+    justify-content: space-around;
+    padding-right: 16px;
+}
+
+.list li{
+    color: rgb(224, 220, 210);
+    padding: 10px;
+    font-size:25px;
+    font-family: "Alegreya", serif;
+    position: relative;
+    animation: listScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+}
+
+#home{
+    animation: homeScroll linear both;
+    animation-timeline: scroll();
+    animation-range: 0 150px;
+}
+
+@keyframes listScroll{
+    0%{
+        color: rgb(224, 220, 210);
+    }
+    100%{
+         color: rgb(142, 119, 84);
+    }
+}
+
+@keyframes homeScroll{
+    0%{
+        color: rgb(224, 220, 210);
+    }
+    100%{
+         color: rgb(0, 0, 0);
+    }
+}
+
+.list #home::before {
+    content: '';
+    position: absolute;
+    
+    top: -22px;  
+    left: 0;
+    width: 100%;
+    height: 3px; 
+    
+    background-color: rgb(142, 119, 84);
+
+}
+
+/* header-content */
+.header-content{
+    text-align: center;
+    position: relative;
+    margin-top: 250px;
+    padding: 0 300px;
+}
+
+.header-content h1{
+    font-size: 76px;
+    font-weight: 400;
+    font-family: "Alegreya", serif;
+    font-style: normal;
+    color:rgb(255, 255, 255);
+    margin-top: 12px;
+    margin-bottom: 15px;
+}
+
+.header-content .head-p{
+    font-size: 22px;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.header-content .sub-p{
+    font-size: 24px;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    line-height: 44.64px;
+}
+
+.header-content p{
+    color:rgba(255, 255, 255, 0.92);
+}
+
+.learn-more{
+    background-color: rgb(142, 119, 84);
+    border: none;
+}
+
+.contact-us{
+    background-color: rgba(0, 0, 0, 0);
+    border: white 2px solid;
+}
+
+.header-button>*{
+    border-radius: 4px;
+    width:130px;
+    height: 50px;
+    font-size: 16px;
+    font-family: "Alegreya Sans", sans-serif;
+    font-weight: 700;
+    color: #fff;
+
+}
+
+.learn-more:hover{
+    background-color: white;
+    color: black;
+}
+
+.contact-us:hover{
+    background-color: white;
+    color: black;
+}
+
+
+.loader {
+  --color-1: #fff;
+  width: 35px;
+  height: 60px;
+  box-sizing: border-box;
+  border: 3px solid var(--color-1);
+
+  position: absolute;
+  top: 100vh;
+  left: 50%;          /* Moves it to the horizontal center */
+  transform: translateX(-50%); /* Perfectly balances the centering */
+  display: block;
+
+  border-radius: 25px; 
+}
+
+.loader::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 10px;
+  
+  transform: translateX(-50%); 
+
+  width: 6px;
+  height: 6px;
+  background: var(--color-1);
+  border-radius: 50%;
+  animation: fadeDown 1.2s ease-out infinite;
+}
+
+
+@keyframes fadeDown {
+  0% {
+    top: 0%;
+    opacity: 1;
+  }
+  100% {
+    top: 60%;
+    opacity: 0;
+  }
+}
+
+/* hero-section */
+.hero-section {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    margin: 100px 150px;
+    gap: 80px;
+    line-height: 31.62px;
+}
+
+.hero-section img{
+    width:100%;
+}
+
+.hero-section .item{
+    width:50%;
+}
+
+.hero-section .item h2{
+    font-size: 32px;
+    margin-bottom: 25px;
+    margin-top: 35px;
+    font-weight: 400;
+}
+
+.hero-section .item p{
+    font-size: 17px;
+    margin-bottom: 25px;
+    font-weight: 400;
+    color: rgb(104, 104, 104);
+}
+
+.hero-section .item ul {
+    list-style-type: none;
+    padding-bottom: 60px;
+}
+
+.hero-section .item ul li{
+    margin:10px;
+    font-size: 17px;
+    font-family: "Alegreya Sans", sans-serif;
+}
+
+.hero-section .item ul i{
+    display: inline-block;
+    font-size: 	22px;
+    color: rgb(142, 119, 84);
+    margin-right: 10px;
+}
+
+.hero-section .item ul i::before{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: rgba(0, 0, 0, 0.15) solid 1px;
+}
+
+.hero-section .item ul span{
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+
+/* sub-section */
+.sub-section {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    padding: 100px 160px;
+    gap: 80px;
+    line-height: 31.62px;
+    background-color: rgb(248, 248, 248);
+}
+
+.sub-section img{
+    width:100%;
+}
+
+.sub-section .item{
+    width:50%
+}
+
+
+.sub-section .item h2{
+    font-size: 32px;
+    margin-bottom: 30px;
+    margin-top: 100px;
+    font-weight: 400;
+}
+
+.sub-section .item p{
+    font-size: 17px;
+    font-weight: 400;
+    color: rgb(104, 104, 104);
+}
+
+/* baking */
+.baking{
+    text-align: center;
+    padding-top:70px;
+    padding-bottom: 50px;
+
+}
+
+.baking-content{
+    box-sizing: content-box;
+    margin: 10px 0px 40px;
+}
+
+.baking .baking-content h2{
+    font-size: 34px;
+}
+
+.baking .baking-content p{
+    font-size: 17px;
+    color: rgb(136, 136, 136);
+    margin: 17px 95px 0px;
+}
+
+.bakes{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    padding: 60px 160px 100px;
+    gap: 80px;
+    line-height: 31.62px;
+    text-align: center;
+}
+
+.bakes .bake{
+    width: clac(100/3);
+}
+
+.bakes .bake h4 {
+    color: rgb(48, 48, 48);
+    font-family: "Alegreya Sans", serif;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.bakes .bake p {
+    color:rgb(104, 104, 104);
+    font-size: 17px;
+}
+
+.bakes .bake img{
+    width: 100%;
+}
+
+/* contact */
+.contact{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    box-sizing: border-box;
+    padding: 120px 160px 100px;
+    gap: 80px;
+    line-height: 31.62px;
+    background-color: rgb(248, 248, 248);
+}
+
+.contact .item {
+    width: 50%;
+}
+
+.contact .item ul {
+    margin-top: 20px;
+    list-style-type: none;
+    font-size: 17px;
+    color: rgb(104, 104, 104);
+}
+
+.contact .item h2{
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.contact .item p{
+    font-size: 17px;
+    color: rgb(104, 104, 104);
+}
+
+.contact .item ul span{
+    margin: 15px 0px 15px 20px;
+}
+
+.contact .item ul i{
+    display: inline-block;
+    font-size: 	18px;
+    color: rgb(255, 255, 255);
+    margin-right: 10px;
+}
+
+.contact .item ul i::before{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: rgb(142, 119, 84);
+    border: rgba(0, 0, 0, 0.15) solid 1px;
+}
+
+iframe{
+    width: 100%;
+}
+
+/* footer */
+footer{
+    height: 115vh;
+}
+
+.footer-content{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    box-sizing: border-box;
+    padding: 60px 40px 52px;
+    gap: 80px;
+    line-height: 31.62px;
+    background-color: rgb(64, 61, 56);
+}
+
+.footer-content .footer-item{
+    width: calc( 100% / 4);
+}
+
+.footer-content .footer-item h4{
+    color: rgb(255, 255, 255);
+    font-family: "Alegreya", serif; 
+    font-weight: 400;
+    font-size: 22px;
+    margin-bottom: 25px;
+}
+
+
+.footer-content .footer-item p{
+    font-size: 20px;
+    color: rgb(150, 150, 150);
+}
+
+.footer-content .footer-item ul{
+    list-style-type: none;
+}
+
+.footer-content .footer-item ul li{
+    border-bottom: rgba(255, 255, 255, 0.05) solid 0.8px;
+    color:rgb(150, 150, 150);
+    margin-bottom: 6px;
+    padding-bottom: 16px;
+    font-size: 20px;
+    line-height: 31.62px;
+}
+
+.footer-content .footer-item ul .no-border{
+    border-bottom: none;
+}
+
+
+.footer-logo{
+    padding: 20px 10px;
+    text-align: center;
+    background-color: rgb(53, 51, 48);
+    z-index:10;
+    padding: 40px 40px;
+}
+
+.footer-logo img{
+    width: 30%;
+} 
+
+.footer-logo p{
+    color: rgb(119, 119, 119);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.footer-logo .emails{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    gap: 60px;
+}
+
+.footer-logo .emails i{
+    color: rgba(214, 214, 214, 0.8);
+}
+
+
+.footer-logo .emails i::before{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: rgb(72, 69, 64);
+    border: rgba(0, 0, 0, 0.15) solid 1px;
+}
+
+
+
+
+
+
+/* media query */
+/*RWD
+600 > xsm
+600 > sm >768
+768 > md >992
+992> lg >1200
+     xlg >1200
+*/
+
+@media screen and (max-width:599px){
+    /* flex column instead of row */
+   .hero-section, 
+    .sub-section, 
+    .bakes,
+    .contact,
+    .footer-content {
+        flex-direction: column; 
+    }
+
+    /* reduced padding and margins */
+    .hero-section {
+        margin: 50px 20px; 
+        padding-top: 20px;
+    }
+
+    .sub-section{
+        padding: 10px 20px 0px ;
+    }
+
+    .bakes, 
+    .contact {
+        padding: 60px 20px; 
+    }
+
+
+    .footer-content {
+        padding: 40px 20px;
+    }
+
+    /* items take 100% of width instead of 50% */
+    .hero-section .item, 
+    .sub-section .item, 
+    .bakes .bake,
+    .contact .item,
+    .footer-content .footer-item {
+        width: 100%;
+    }
+
+    .bakes .bake {
+        margin-bottom: 30px; 
+    }
+
+    .footer-content .footer-item {
+        margin-bottom: 40px;
+    }
+        
+    .baking{
+        height: auto;
+    }
+    .menu-bars{
+        display: block;
+    }
+    .navbar .list{
+        display: none;
+    }
+
+    /* remove background from header 
+    add it to the header content only 
+    so its not at the backof the navbar */
+    header{
+        background-image: none;
+        height: auto;
+        position: relative;
+    }
+
+    /* remove the animation and fixed position of navbar */
+    .navbar {
+        position: unset;   
+        background-color: rgb(255, 255, 255);
+        animation: none;
+        height: 60px;
+        margin-bottom: 0px;
+        padding: 0 30px;
+    }
+
+    .nav-content{
+        padding-top: 0px;
+    }
+
+    .logo img{
+        height: 50px;
+        animation: none;
+        content: url('../images/bakery-color.png'); 
+    }
+
+    .header-content{
+        background-image: url(../images/drew-coffman-1872.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 80vh;
+        margin: 0 auto;
+        padding: 150px 0 0;
+    }
+
+    /* reduced fonts */
+    .header-content h1{
+        font-size: 33px;
+    }
+
+    .header-content .head-p{
+        font-size: 20px;
+    }
+
+    .header-content .sub-p{
+        font-size: 16px;
+        line-height: 29.76px;
+    }
+
+    .loader {
+        top: auto;
+        bottom: 40px;
+        width: 30px;
+        height: 45px;
+        border: 2px solid var(--color-1);
+    }
+
+    /* hero section */
+    /* reduced fonts */
+    .hero-section .item h2,
+    .sub-section .item h2,
+    .contact .item h2 {
+        font-size: 25px;
+    }
+
+    .hero-section .item ul i{
+        margin: 0px;
+    }
+
+    .hero-section .item ul li{
+        margin:20px;
+    }
+
+    /* baking section */
+    /* reduced fonts */
+    .baking .baking-content h2{
+        font-size: 30px;
+    }
+
+    .bakes{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .bakes .bake p {
+        padding: 0 25px ;
+    }
+
+    /* footer section */
+    /* reduced fonts */
+    .footer-content .footer-item h4{
+        font-size: 19px;
+    }
+
+    .footer-content .footer-item p{
+        font-size: 17px;
+    }
+
+    .footer-content .footer-item ul li{
+        font-size: 17px;
+    }
+
+    .footer-logo .emails{
+        gap: 40px;
+    }
+
+}
+
+@media screen and (max-width:768px) and (min-width:600px){
+    /* flex direction column instead of row */
+    .hero-section, 
+    .sub-section, 
+    .bakes,
+    .contact,
+    .footer-content {
+        flex-direction: column; 
+    }
+
+    /* reduced padding and margins */
+    .hero-section {
+        margin: 50px 20px; 
+    }
+
+    .sub-section, 
+    .bakes, 
+    .contact {
+        padding: 50px 20px; 
+    }
+
+    .footer-content {
+        padding: 40px 20px;
+    }
+
+    /* items take 100% of width instead of 50% */
+    .hero-section .item, 
+    .sub-section .item, 
+    .bakes .bake,
+    .contact .item,
+    .footer-content .footer-item {
+        width: 100%;
+    }
+
+    .bakes .bake {
+        margin-bottom: 30px; 
+    }
+
+    .footer-content .footer-item {
+        margin-bottom: 40px;
+    }
+        
+    .baking{
+        height: auto;
+    }
+    .menu-bars{
+        display: block;
+    }
+    .navbar .list{
+        display: none;
+    }
+
+    /* remove background from header 
+    add it to the header content only 
+    so its not at the backof the navbar */
+    /* header section */
+    header{
+        background-image: none;
+        height: auto;
+        position: relative;
+    }
+
+    /* remove the animation and fixed position of navbar */
+    .navbar {
+        position: unset;   
+        background-color: rgb(255, 255, 255);
+        animation: none;
+        height: 50px;
+        margin-bottom: 0px;
+        padding: 0 30px;
+    }
+
+    .nav-content{
+        padding-top: 0px;
+    }
+
+    .logo img{
+        height: 50px;
+        animation: none;
+        content: url('../images/bakery-color.png'); 
+    }
+
+    .header-content{
+        background-image: url(../images/drew-coffman-1872.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 75vh;
+        margin: 0 auto;
+        padding: 150px 10px 0;
+    }
+
+    .header-content h1{
+        font-size: 33px;
+        line-height: 27.9px;
+    }
+
+    .header-content .head-p{
+        font-size: 20px;
+        line-height: 27.9px;
+    }
+
+    .header-content .sub-p{
+        font-size: 16px;
+        line-height: 27.9px;
+    }
+
+    .loader {
+        top: auto;
+        bottom: 40px;
+        width: 30px;
+        height: 45px;
+        border: 2px solid var(--color-1);
+    }
+
+    /* reduced fonts */
+    .hero-section .item h2,
+    .sub-section .item h2,
+    .contact .item h2 {
+        font-size: 25px;
+    }
+
+    /* hero section */
+    .hero-section .item ul i{
+        margin: 0px;
+    }
+
+    .hero-section .item ul li{
+        margin:20px;
+    }
+
+    /* baking section */
+    /* reduced fonts */
+    .baking .baking-content h2{
+        font-size: 30px;
+    }
+
+    .bakes{
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .bakes .bake p {
+        padding: 0 25px ;
+    }
+
+    /* footer section */
+    .footer-content .footer-item h4{
+        font-size: 19px;
+    }
+
+    .footer-content .footer-item p{
+        font-size: 17px;
+    }
+
+    .footer-content .footer-item ul li{
+        font-size: 17px;
+    }
+
+    .footer-logo .emails{
+        gap: 40px;
+    }
+}
+
+@media screen and (max-width:991px) and (min-width:767px){
+    header{
+        background-image: none;
+        position: relative;
+    }
+
+    /* changing the navbar */
+    .menu-bars{
+        display: block;
+    }
+    .navbar .list{
+        display: none;
+    }
+
+    .navbar {
+        position: unset;   
+        background-color: rgb(255, 255, 255);
+        animation: none;
+        height: 75px;
+        margin-bottom: 0px;
+        padding: 0 30px;
+    }
+
+    .nav-content{
+        padding-top: 0px;
+    }
+
+    .logo img{
+        height: 50px;
+        animation: none;
+        content: url('../images/bakery-color.png'); 
+    }
+
+    .header-content{
+        background-image: url(../images/drew-coffman-1872.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 110vh;
+        margin: 0 auto;
+        padding: 150px 150px 150px;
+    }
+
+    .loader {
+        top: auto;
+        bottom: -20px;
+        border: 2px solid var(--color-1);
+    }
+
+    /* reduced padding and margins */
+    .hero-section {
+        margin: 100px 40px; 
+    }
+    .sub-section, 
+    .bakes, 
+    .contact {
+        padding: 50px 20px; 
+    }
+    .footer-content {
+        padding: 40px 20px;
+    }
+
+    /* hero section */
+    .hero-section {
+        align-items: center;
+    }
+    .hero-section img{
+        margin: 80px 0px;
+    }
+
+    /* sub section  */
+    .sub-section {
+        align-items: center;
+    }
+    .sub-section img{
+        margin: 170px 0px 0px;
+    }
+    .sub-section .item h2{
+        margin-top: 50px;
+    }
+
+}
+
+@media screen and (max-width:1200px) and (min-width:992px){
+    .header-content{
+        padding: 0px 150px 0px;
+    }
+    /* hero section */
+    .hero-section {
+        align-items: center;
+        margin: 50px 50px;
+    }
+    .hero-section img{
+        margin: 80px 0px 60px;
+    }
+
+    /* sub section  */
+    .sub-section {
+        align-items: center;
+        padding: 50px 50px;
+    }
+    .sub-section img{
+        margin: 160px 0px 0px;
+    }
+
+    /* bakes section  */
+    .bakes{
+        padding: 60px 100px 100px;
+    }
+}
