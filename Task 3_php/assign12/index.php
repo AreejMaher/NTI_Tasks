@@ -41,10 +41,10 @@
         }
         
         $discount = $total_price*$discount_rate;
-        $price_after_tax = $total_price - $discount;
+        $price_after_discount = $total_price - $discount;
 
         $_SESSION['total_price'] = $total_price;
-        $_SESSION['price_after_discount'] = $price_after_tax;
+        $_SESSION['price_after_discount'] = $price_after_discount;
         header('location: welcome.php');
     }
 

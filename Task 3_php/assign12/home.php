@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,7 +17,6 @@
     <label class="form-label">Product Price</label>
     <input type="number" class="form-control" name="price" step="0.01">
     <?php
-    session_start(); 
     if(isset($_SESSION['price_errors'])){
       foreach($_SESSION['price_errors'] as $error){
         ?>

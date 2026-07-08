@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +13,6 @@
 </head>
 <body>
 <?php
-session_start();
 if($_SESSION['total_price'] && $_SESSION['price_after_discount']){
 ?>
     <div class="alert alert-primary text-center fs-4 mt-4" role="alert">
