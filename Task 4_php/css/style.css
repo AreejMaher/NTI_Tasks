@@ -1,0 +1,7 @@
+header .header-content {
+    background-image: url(../images/wallpaper3.jpg);
+    height: calc( 100vh - 80px);
+    background-size: cover;
+    margin-top: 80px;
+}
+
